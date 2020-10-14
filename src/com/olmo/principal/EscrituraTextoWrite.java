@@ -1,0 +1,59 @@
+package com.olmo.principal;
+
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class EscrituraTextoWrite {
+	public static void main(String[] args) {
+//Creamos un String para almacenar el nombre del fichero en que escribir
+//Utiliza una ruta en la que puedas crear ficheros en tu equipo 
+		String fich = new String("C:\\olmo\\escritext.txt");
+//Declaramos un objeto de tipo FileWriter
+		FileWriter fw = null;
+		try {
+			// Creamos un nuevo objeto de tipo FileWriter
+			fw = new FileWriter(fich);
+			// Escribimos un número entero que indicará un carácter a escribir según el
+			// código ASCII. En este caso el número 65 es la letra A mayúscula
+			fw.write(65);
+			// Escribimos una cadena
+			fw.write("Esto es una prueba de escritura");
+			// Escribimos un salto de línea en algunas Sistemas Operativos basta con poner
+			// \n y en otros hay que poner \r\n
+			fw.write("\r\n");
+			// Escribimos en el fichero parte del String que guarda la ruta del fichero
+			// En este ejemplo empezamos en la primera posición y escribimos 5 caracteres
+			fw.write(fich, 0, 5);
+			// En este ejemplo empezamos en la primera 3 y escribimos 4 caracteres
+			fw.write(fich, 3, 4);
+			
+			
+			//Ejercico 4
+			//O
+			fw.write(79);
+			fw.write("\r\n");
+			//l
+			fw.write(108);
+			fw.write("\r\n");
+			//m
+			fw.write(109);
+			fw.write("\r\n");
+			//o
+			fw.write(111);
+			
+			
+			
+			
+			// Cerramos el fichero
+			fw.close();
+		}
+		// Capturamos las excepciones de fichero no encontrado y de error de
+		// entrada/salida
+		catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
