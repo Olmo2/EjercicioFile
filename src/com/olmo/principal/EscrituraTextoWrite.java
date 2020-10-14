@@ -27,6 +27,7 @@ public class EscrituraTextoWrite {
 			fw.write(fich, 0, 5);
 			// En este ejemplo empezamos en la primera 3 y escribimos 4 caracteres
 			fw.write(fich, 3, 4);
+			fw.write("\r\n");
 			
 			
 			//Ejercico 4
@@ -41,9 +42,33 @@ public class EscrituraTextoWrite {
 			fw.write("\r\n");
 			//o
 			fw.write(111);
+			fw.write("\r\n");
+			
+			//Ejercicio 5
+			String texto = "Anita, la gorda lagartona, no traga la droga latina";
+			
+			fw.write(texto.substring(0,6));
+			fw.write("\r\n");
+			fw.write(texto.substring(7,8));
+			fw.write("\r\n");
+			fw.write(texto.substring(10,14));
+			fw.write("\r\n");
+			fw.write(texto.substring(16,25));
+			fw.write("\r\n");
+			fw.write(texto.substring(27,28));
+			fw.write("\r\n");
+			fw.write(texto.substring(30,34));
+			fw.write("\r\n");
+			fw.write(texto.substring(36,37));
+			fw.write("\r\n");
+			fw.write(texto.substring(39,43));
+			fw.write("\r\n");
+			fw.write(texto.substring(45,50));
 			
 			
-			
+			for(int i=0;i<texto.length();i++) {
+				fw.write(texto.charAt(i));
+			}
 			
 			// Cerramos el fichero
 			fw.close();
