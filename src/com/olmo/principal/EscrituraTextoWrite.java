@@ -47,28 +47,69 @@ public class EscrituraTextoWrite {
 			//Ejercicio 5
 			String texto = "Anita, la gorda lagartona, no traga la droga latina";
 			
-			fw.write(texto.substring(0,6));
+			//fw.write(texto.substring(0,6));
+			fw.write(texto,0,6);
 			fw.write("\r\n");
-			fw.write(texto.substring(7,8));
+//			fw.write(texto.substring(7,9));
+			fw.write(texto,7,2);
 			fw.write("\r\n");
-			fw.write(texto.substring(10,14));
+//			fw.write(texto.substring(10,15));
+			fw.write(texto,10,5);
 			fw.write("\r\n");
-			fw.write(texto.substring(16,25));
+//			fw.write(texto.substring(16,26));
+			fw.write(texto,16,10);
 			fw.write("\r\n");
-			fw.write(texto.substring(27,28));
+//			fw.write(texto.substring(27,29));
+			fw.write(texto,27,2);
 			fw.write("\r\n");
-			fw.write(texto.substring(30,34));
+//			fw.write(texto.substring(30,35));
+			fw.write(texto,30,5);
 			fw.write("\r\n");
-			fw.write(texto.substring(36,37));
+//			fw.write(texto.substring(36,38));
+			fw.write(texto,36,2);
 			fw.write("\r\n");
-			fw.write(texto.substring(39,43));
+//			fw.write(texto.substring(39,44));
+			fw.write(texto,39,5);
 			fw.write("\r\n");
-			fw.write(texto.substring(45,50));
+//			fw.write(texto.substring(45));
+			fw.write(texto,45,6);
+			fw.write("\r\n");
 			
-			
-			for(int i=0;i<texto.length();i++) {
-				fw.write(texto.charAt(i));
+			for(int i=texto.length()-1; i>=0 ;i--) {
+				char c= texto.charAt(i);
+				fw.write(c);
+				System.out.println(texto.charAt(i));
 			}
+			
+			
+		
+				
+				
+			//Ejercico 6
+//			publicclass File11 {
+//				publicstaticvoid main(String[] args) { 
+//					Scanner sc = new Scanner(System.in);   
+//					PrintWriter salida = null;
+//					try { salida = new PrintWriter("c:/Alvaro/datos.txt");
+//					//se crea el fichero     
+//					String cadena;          
+//					System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
+//					cadena = sc.nextLine();
+//					//se introduce por teclado una cadena de texto
+//					while (!cadena.equalsIgnoreCase("FIN")) { 
+//						salida.println(cadena); 
+//						//se escribe la cadena en el fichero
+//						cadena = sc.nextLine(); 
+//						//se introduce por teclado una cadena de texto 
+//						}
+//					salida.flush(); 
+//					} catch (FileNotFoundException e) {   
+//						System.out.println(e.getMessage()); 
+//						} finally {  
+//							salida.close();  
+//							}    
+//					} } }}}
+		
 			
 			// Cerramos el fichero
 			fw.close();
