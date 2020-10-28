@@ -85,30 +85,6 @@ public class EscrituraTextoWrite {
 		
 				
 				
-			//Ejercico 6
-//			publicclass File11 {
-//				publicstaticvoid main(String[] args) { 
-//					Scanner sc = new Scanner(System.in);   
-//					PrintWriter salida = null;
-//					try { salida = new PrintWriter("c:/Alvaro/datos.txt");
-//					//se crea el fichero     
-//					String cadena;          
-//					System.out.println("Introduce texto. Para acabar introduce la cadena FIN:");
-//					cadena = sc.nextLine();
-//					//se introduce por teclado una cadena de texto
-//					while (!cadena.equalsIgnoreCase("FIN")) { 
-//						salida.println(cadena); 
-//						//se escribe la cadena en el fichero
-//						cadena = sc.nextLine(); 
-//						//se introduce por teclado una cadena de texto 
-//						}
-//					salida.flush(); 
-//					} catch (FileNotFoundException e) {   
-//						System.out.println(e.getMessage()); 
-//						} finally {  
-//							salida.close();  
-//							}    
-//					} } }}}
 		
 			
 			// Cerramos el fichero

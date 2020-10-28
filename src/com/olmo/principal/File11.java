@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
-
+//Ejercicio 6 & 7
 public class File11 {
 	
 	public static void main(String[] args) { 
