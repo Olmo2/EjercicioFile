@@ -11,13 +11,20 @@ public class FicherosAleatorios {
 	static Scanner sc = new Scanner(System.in);
 	static RandomAccessFile fichero = null;
 
+	
+	public static void llenarFichero() throws IOException {
+	fichero.writeInt(1);
+	fichero.writeInt(2);
+	fichero.writeInt(3);
+	fichero.writeInt(4);
+}
 	public static void main(String[] args) {
 		int numero;
 		int numAux;
 		int numEnteros;
 		try {
 			//se abre el fichero para lectura y escritura
-			fichero = new RandomAccessFile("c:/olmo/enteros.dat", "rw");
+			fichero = new RandomAccessFile("c:/test/enteros.dat", "rw");
 			
 			 // muestra el contenido original del fichero
 			
@@ -25,37 +32,51 @@ public class FicherosAleatorios {
 //			System.out.println(fichero.readInt());
 //			System.out.println(fichero.getFilePointer());
 //			fichero.write(9);
+			
+			if(fichero.length()==0) {
+				llenarFichero();
+			}
 			mostrarFichero();
+		
 			System.out.print("Introduce un número entero para añadir al principio del fichero: ");
 			// se lee el entero a añadir en el fichero
 			numero = sc.nextInt(); 
 			numEnteros=(int) fichero.length()/4;
 			// nos situamos al final del fichero, vamos 4 bytes para atras para enfocar el último numero
 			fichero.seek(fichero.length()-4); 
-			
-			
-			//Lectura y escritura del número en la nueva posicion 
-			numAux=fichero.readInt();
-			fichero.writeInt(numAux);/*ahora está en la posicion 20*/
-			System.out.println(numAux);
-			fichero.seek(8); 
-			
-			numAux=fichero.readInt();
-			fichero.writeInt(numAux);/*ahora está en la posicion 16*/
-			
-			fichero.seek(4); 
-			
-			numAux=fichero.readInt();
-			fichero.writeInt(numAux);/*ahora está en la posicion 12*/
-			
-			fichero.seek(0); 
-			
-			numAux=fichero.readInt();
-			fichero.writeInt(numAux);/*ahora está en la posicion 8*/
-			
-			
-			fichero.seek(0); 
+			for(int i =0 ; i<numEnteros;i++) {
+				numAux=fichero.readInt();
+				fichero.writeInt(numAux);/*ahora está en la posicion 20*/
+				
+				if(fichero.getFilePointer()-12 < 0) {
+					fichero.seek(0);
+					
+				}else{fichero.seek(fichero.getFilePointer()-12);}
+				
+			}
 			fichero.writeInt(numero); // se escribe el entero
+//			//Lectura y escritura del número en la nueva posicion 
+//			numAux=fichero.readInt();
+//			fichero.writeInt(numAux);/*ahora está en la posicion 20*/
+//			
+//			fichero.seek(8); 
+//			
+//			numAux=fichero.readInt();
+//			fichero.writeInt(numAux);/*ahora está en la posicion 16*/
+//			
+//			fichero.seek(4); 
+//			
+//			numAux=fichero.readInt();
+//			fichero.writeInt(numAux);/*ahora está en la posicion 12*/
+//			
+//			fichero.seek(0); 
+//			
+//			numAux=fichero.readInt();
+//			fichero.writeInt(numAux);/*ahora está en la posicion 8*/
+//			
+//			
+//			fichero.seek(0); 
+			
 			mostrarFichero();// muestra el contenido del fichero después de añadir el número
 		} catch (FileNotFoundException ex) {
 			System.out.println(ex.getMessage());
