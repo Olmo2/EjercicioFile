@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Scanner;
 
+
+/*ejercicion 17*/
 public class FicherosAleatorios {
 
 	static Scanner sc = new Scanner(System.in);
@@ -28,11 +30,7 @@ public class FicherosAleatorios {
 			
 			 // muestra el contenido original del fichero
 			
-//			fichero.seek(12);
-//			System.out.println(fichero.readInt());
-//			System.out.println(fichero.getFilePointer());
-//			fichero.write(9);
-			
+
 			if(fichero.length()==0) {
 				llenarFichero();
 			}
@@ -55,27 +53,7 @@ public class FicherosAleatorios {
 				
 			}
 			fichero.writeInt(numero); // se escribe el entero
-//			//Lectura y escritura del número en la nueva posicion 
-//			numAux=fichero.readInt();
-//			fichero.writeInt(numAux);/*ahora está en la posicion 20*/
-//			
-//			fichero.seek(8); 
-//			
-//			numAux=fichero.readInt();
-//			fichero.writeInt(numAux);/*ahora está en la posicion 16*/
-//			
-//			fichero.seek(4); 
-//			
-//			numAux=fichero.readInt();
-//			fichero.writeInt(numAux);/*ahora está en la posicion 12*/
-//			
-//			fichero.seek(0); 
-//			
-//			numAux=fichero.readInt();
-//			fichero.writeInt(numAux);/*ahora está en la posicion 8*/
-//			
-//			
-//			fichero.seek(0); 
+
 			
 			mostrarFichero();// muestra el contenido del fichero después de añadir el número
 		} catch (FileNotFoundException ex) {
