@@ -23,10 +23,10 @@ import java.util.Scanner;
 	A continuación debe escribir el contenido de la matriz en un fichero.
 	Al principio del fichero (antes de escribir los datos de la matriz) se escriben dos enteros
 	con los valores del número de filas y columnas de la matriz. */
-public class Ejercicio14 {
+public class Binarios2_Ejercicio14 {
 	
 	
-	public static void main(String[] args) {
+	public Double[][] matriz() {
 	int row;
 	int col;
 	Double num;
@@ -78,25 +78,26 @@ public class Ejercicio14 {
 			}
 		}
 	}
-	try {
-		System.out.println(dis.readInt());
-		System.out.println(dis.readInt());
-	} catch (IOException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
 	
+//	try {
+//		System.out.println(dis.readInt());
+//		System.out.println(dis.readInt());
+//	} catch (IOException e1) {
+//		// TODO Auto-generated catch block
+//		e1.printStackTrace();
+//	}
+//	
 	
-	for(int i =0;i<row;i++) {
-		for(int j=0;j<col;j++) {
-			try {
-				System.out.println(dis.readDouble());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+//	for(int i =0;i<row;i++) {
+//		for(int j=0;j<col;j++) {
+//			try {
+//				System.out.println(dis.readDouble());
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
+//	}
 	
 	try {
 		fos.close();
@@ -107,6 +108,9 @@ public class Ejercicio14 {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
+	
+	return m;
 
 	}
 	
