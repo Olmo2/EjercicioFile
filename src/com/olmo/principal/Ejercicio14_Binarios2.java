@@ -79,26 +79,6 @@ public class Ejercicio14_Binarios2 {
 		}
 	}
 	
-//	try {
-//		System.out.println(dis.readInt());
-//		System.out.println(dis.readInt());
-//	} catch (IOException e1) {
-//		// TODO Auto-generated catch block
-//		e1.printStackTrace();
-//	}
-//	
-	
-//	for(int i =0;i<row;i++) {
-//		for(int j=0;j<col;j++) {
-//			try {
-//				System.out.println(dis.readDouble());
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-//	}
-	
 	try {
 		fos.close();
 		dos.close();
