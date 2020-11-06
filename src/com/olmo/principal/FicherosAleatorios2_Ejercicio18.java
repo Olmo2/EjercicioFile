@@ -7,8 +7,8 @@ import java.io.RandomAccessFile;
 import java.util.Scanner;
 
 
-/*ejercicion 17*/
-public class FicherosAleatorios {
+/*ejercicio 17*/
+public class FicherosAleatorios2_Ejercicio18 {
 
 	static Scanner sc = new Scanner(System.in);
 	static RandomAccessFile fichero = null;
@@ -21,7 +21,8 @@ public class FicherosAleatorios {
 	fichero.writeInt(4);
 }
 	public static void main(String[] args) {
-		int numero;
+		int pos;
+		int num;
 		int numAux;
 		int numEnteros;
 		try {
@@ -36,23 +37,20 @@ public class FicherosAleatorios {
 			}
 			mostrarFichero();
 		
-			System.out.print("Introduce un número entero para añadir al principio del fichero: ");
+			System.out.print("Introduce la posicion del número a editar: ");
+			// se lee la posicion del entero a editar en el fichero
+			pos = sc.nextInt(); 
+			
+			System.out.print("Introduce el entero que quieres escribir: ");
 			// se lee el entero a añadir en el fichero
-			numero = sc.nextInt(); 
+			num = sc.nextInt(); 
 			numEnteros=(int) fichero.length()/4;
-			// nos situamos al final del fichero, vamos 4 bytes para atras para enfocar el último numero
-			fichero.seek(fichero.length()-4); 
-			for(int i =0 ; i<numEnteros;i++) {
-				numAux=fichero.readInt();
-				fichero.writeInt(numAux);/*ahora está en la posicion 20*/
-				
-				if(fichero.getFilePointer()-12 < 0) {
-					fichero.seek(0);
-					
-				}else{fichero.seek(fichero.getFilePointer()-12);}
-				
-			}
-			fichero.writeInt(numero); // se escribe el entero
+			
+			// nos situamos en la posicion indiicada * 4(final del número) y le restamos 4 para estar al principio
+			fichero.seek((pos*4)-4); 
+			System.out.println("Número actual: " + fichero.readInt());
+			fichero.seek(fichero.getFilePointer()-4);
+			fichero.writeInt(num); // se escribe el entero
 
 			
 			mostrarFichero();// muestra el contenido del fichero después de añadir el número
