@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 /* EJERCICIOS 6 & 7*/
-public class File11 {
+public class Ejercicio6_7_File11 {
 	
 	public static void main(String[] args) { 
 		Scanner sc = new Scanner(System.in);

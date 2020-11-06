@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class LecturaFR2 {
+public class Ejercicio9_LecturaFR2 {
 	public static void main(String[] args) {
 		FileReader fr = null;
 		File file =new File("c:/olmo/datos_copia.txt");

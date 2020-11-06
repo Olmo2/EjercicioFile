@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class EscrituraTextoWrite {
+public class Ejercicio3_4_5_EscrituraTextoWrite {
 	public static void main(String[] args) {
 //Creamos un String para almacenar el nombre del fichero en que escribir
 //Utiliza una ruta en la que puedas crear ficheros en tu equipo 

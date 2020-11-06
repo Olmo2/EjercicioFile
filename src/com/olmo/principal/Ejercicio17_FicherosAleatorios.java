@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 /*ejercicio 17*/
-public class FicherosAleatorios_Ejercicio17 {
+public class Ejercicio17_FicherosAleatorios {
 
 	static Scanner sc = new Scanner(System.in);
 	static RandomAccessFile fichero = null;

@@ -8,19 +8,19 @@ import java.io.IOException;
 
 
 /*Ejercicio 15*/
-public class Binarios3_Ejercicio15 {
+public class Ejercicio15_Binarios3 {
 
 	public static void main(String[] args) {
 
 		FileInputStream fis = null;
 		DataInputStream entrada = null;
-		int n;
+		float n;
 		try {
 			fis = new FileInputStream("c:/olmo/datos.dat");
 			entrada = new DataInputStream(fis);
 			while (true) {
 				// se lee un entero del fichero
-				n = entrada.readInt(); 
+				n = entrada.readFloat(); 
 				// se muestra en pantalla
 				System.out.println(n); 
 			}

@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /* EJERCICIOS 10 */
-public class FileScanner {
+public class Ejercicio10_FileScanner {
 	public static void main(String[] args) {
 		File f = new File("c:/olmo/datos.txt");
 		String cadena;

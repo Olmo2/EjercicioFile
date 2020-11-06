@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class LecturaFR {
+public class Ejercicio8_LecturaFR {
 /*Ejercicio 8*/
 	public static void main(String[] args) {
 		FileReader fr = null;

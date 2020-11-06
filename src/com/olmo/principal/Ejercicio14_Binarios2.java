@@ -23,7 +23,7 @@ import java.util.Scanner;
 	A continuación debe escribir el contenido de la matriz en un fichero.
 	Al principio del fichero (antes de escribir los datos de la matriz) se escriben dos enteros
 	con los valores del número de filas y columnas de la matriz. */
-public class Binarios2_Ejercicio14 {
+public class Ejercicio14_Binarios2 {
 	
 	
 	public Double[][] matriz() {

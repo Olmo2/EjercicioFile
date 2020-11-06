@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /* EJERCICIO 13*/
-public class Binarios1_Ejercicio13 {
+public class Ejercicio13_Binarios1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		FileOutputStream fos = null;
