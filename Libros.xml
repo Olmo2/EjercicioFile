@@ -1,39 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Libros>
-	<libro>
-		<titulo>Quijote</titulo>
-		<anio>1605</anio>
-	</libro>
-	<libro>
-		<titulo>Harry Potter</titulo>
-		<anio>1998</anio>
-	</libro>
-	<libro>
-		<titulo>La guÃ­a del autoestopista intergalÃ¡ctico</titulo>
-		<anio>1973</anio>
-	</libro>
-	<libro>
-		<titulo>Los juegos del hambre</titulo>
-		<anio>2005</anio>
-	</libro>
-	<libro>
-		<titulo>El seÃ±or de los anillos</titulo>
-		<anio>1940</anio>
-	</libro>
-	<libro>
-		<titulo>La biblia</titulo>
-		<anio>1</anio>
-	</libro>
-	<libro>
-		<titulo>El corÃ¡n</titulo>
-		<anio>2</anio>
-	</libro>
-	<libro>
-		<titulo>Mortadelo y FilemÃ³n</titulo>
-		<anio>1986</anio>
-	</libro>
-	<libro>
-		<titulo>Asterix y Obelix</titulo>
-		<anio>1965</anio>
-	</libro>
-</Libros>
+<ListaLibrosMunicipio>
+  <DatosLibro>
+    <titulo>Quijote</titulo>
+    <anio>1605</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>Harry Potter</titulo>
+    <anio>1998</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>La guía del autoestopista intergaláctico</titulo>
+    <anio>1973</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>Los juegos del hambre</titulo>
+    <anio>2005</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>El señor de los anillos</titulo>
+    <anio>1940</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>La biblia</titulo>
+    <anio>1</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>El corán</titulo>
+    <anio>2</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>Mortadelo y Filemón</titulo>
+    <anio>1986</anio>
+  </DatosLibro>
+  <DatosLibro>
+    <titulo>Asterix y Obelix</titulo>
+    <anio>1965</anio>
+  </DatosLibro>
+</ListaLibrosMunicipio>
