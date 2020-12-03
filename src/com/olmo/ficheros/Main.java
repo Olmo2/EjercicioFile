@@ -1,4 +1,4 @@
-package com.olmo.principal;
+package com.olmo.ficheros;
 
 import java.io.File;
 import java.util.Date;
